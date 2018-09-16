@@ -120,7 +120,7 @@ GoldenrodDeptStore6FLassText:
 	line "LUCKY CHANNEL?"
 
 	para "If you want to"
-	line "win, trade #MON"
+	line "win, trade #mon"
 
 	para "with as many peo-"
 	line "ple as possible to"
@@ -134,7 +134,7 @@ GoldenrodDeptStore6FSuperNerdText:
 	line "try the vending"
 	cont "machine's drinks."
 
-	para "Your #MON will"
+	para "Your #mon will"
 	line "love them too."
 	done
 

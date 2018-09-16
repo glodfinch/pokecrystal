@@ -25,7 +25,7 @@ Script_Whiteout:
 	jumpstd bugcontestresultswarp
 
 .WhitedOutText:
-	; is out of useable #MON!  whited out!
+	; is out of useable #mon!  whited out!
 	text_jump UnknownText_0x1c0a4e
 	db "@"
 

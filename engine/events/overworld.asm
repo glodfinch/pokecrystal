@@ -937,7 +937,7 @@ TeleportFunction:
 	ret
 
 .Text_ReturnToLastMonCenter:
-	; Return to the last #MON CENTER.
+	; Return to the last #mon CENTER.
 	text_jump UnknownText_0x1c071a
 	db "@"
 
@@ -1060,7 +1060,7 @@ AskStrengthScript:
 	end
 
 UnknownText_0xcd69:
-	; A #MON may be able to move this. Want to use STRENGTH?
+	; A #mon may be able to move this. Want to use STRENGTH?
 	text_jump UnknownText_0x1c07a0
 	db "@"
 
@@ -1070,7 +1070,7 @@ UnknownText_0xcd6e:
 	db "@"
 
 UnknownText_0xcd73:
-	; A #MON may be able to move this.
+	; A #mon may be able to move this.
 	text_jump UnknownText_0x1c07f4
 	db "@"
 
@@ -1329,7 +1329,7 @@ AskHeadbuttScript:
 	end
 
 UnknownText_0xcee6:
-	; A #MON could be in this tree. Want to HEADBUTT it?
+	; A #mon could be in this tree. Want to HEADBUTT it?
 	text_jump UnknownText_0x1c08bc
 	db "@"
 
@@ -1423,7 +1423,7 @@ AskRockSmashScript:
 	jumptext UnknownText_0xcf72
 
 UnknownText_0xcf72:
-	; Maybe a #MON can break this.
+	; Maybe a #mon can break this.
 	text_jump UnknownText_0x1c0906
 	db "@"
 

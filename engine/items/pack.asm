@@ -1572,7 +1572,7 @@ Text_ThisIsntTheTime:
 	db "@"
 
 TextJump_YouDontHaveAMon:
-	; You don't have a #MON!
+	; You don't have a #mon!
 	text_jump Text_YouDontHaveAMon
 	db "@"
 

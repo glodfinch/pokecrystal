@@ -154,7 +154,7 @@ UnknownText_0x555e6:
 
 UnknownText_0x55604:
 	text "So it really was a"
-	line "#MON!"
+	line "#mon!"
 	done
 
 GoldenrodFlowerShop_MapEvents:

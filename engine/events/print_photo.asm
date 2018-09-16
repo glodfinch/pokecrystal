@@ -30,7 +30,7 @@ PhotoStudio:
 	ret
 
 .Text_AskWhichMon:
-	; Which #MON should I photo- graph?
+	; Which #mon should I photo- graph?
 	text_jump UnknownText_0x1be024
 	db "@"
 

@@ -87,7 +87,7 @@ DisplayCaughtContestMonStats:
 	db " THIS <PKMN>  @"
 
 SwitchMonText:
-	; Switch #MON?
+	; Switch #mon?
 	text_jump UnknownText_0x1c10cf
 	db "@"
 

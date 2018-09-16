@@ -2645,7 +2645,7 @@ UnknownText_0x8a107:
 	db "@"
 
 UnknownText_0x8a10c:
-	; If you have your friend's CARD, you can use it to make a call from a mobile phone on the 2nd floor of a #MON CENTER.
+	; If you have your friend's CARD, you can use it to make a call from a mobile phone on the 2nd floor of a #mon CENTER.
 	text_jump UnknownText_0x1c531e
 	db "@"
 

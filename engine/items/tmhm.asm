@@ -177,7 +177,7 @@ Text_BootedHM:
 	db "@"
 
 Text_ItContained:
-	; It contained @ . Teach @ to a #MON?
+	; It contained @ . Teach @ to a #mon?
 	text_jump UnknownText_0x1c0396
 	db "@"
 

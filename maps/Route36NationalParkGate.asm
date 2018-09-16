@@ -486,9 +486,9 @@ UnknownText_0x6add5:
 	line "ple."
 
 	para "Using one of your"
-	line "#MON, catch a"
+	line "#mon, catch a"
 
-	para "bug #MON to be"
+	para "bug #mon to be"
 	line "judged."
 
 	para "Would you like to"
@@ -509,7 +509,7 @@ UnknownText_0x6aeb1:
 UnknownText_0x6aecc:
 	text "The person who"
 	line "gets the strong-"
-	cont "est bug #MON"
+	cont "est bug #mon"
 	cont "is the winner."
 
 	para "You have 20"
@@ -520,13 +520,13 @@ UnknownText_0x6aecc:
 	cont "done."
 
 	para "You can keep the"
-	line "last #MON you"
+	line "last #mon you"
 	cont "catch as your own."
 
 	para "Go out and catch"
 	line "the strongest bug"
 
-	para "#MON you can"
+	para "#mon you can"
 	line "find!"
 	done
 
@@ -534,14 +534,14 @@ UnknownText_0x6afb0:
 	text "Uh-oh…"
 
 	para "You have more than"
-	line "one #MON."
+	line "one #mon."
 
 	para "You'll have to use"
 	line "@"
 	text_from_ram wStringBuffer3
 	text ", the"
 
-	para "first #MON in"
+	para "first #mon in"
 	line "your party."
 
 	para "Is that OK with"
@@ -550,19 +550,19 @@ UnknownText_0x6afb0:
 
 UnknownText_0x6b021:
 	text "Fine, we'll hold"
-	line "your other #MON"
+	line "your other #mon"
 	cont "while you compete."
 	done
 
 UnknownText_0x6b055:
-	text "<PLAYER>'s #MON"
+	text "<PLAYER>'s #mon"
 	line "were left with the"
 	cont "CONTEST HELPER."
 	done
 
 UnknownText_0x6b081:
 	text "Please choose the"
-	line "#MON to be used"
+	line "#mon to be used"
 
 	para "in the Contest,"
 	line "then come see me."
@@ -576,13 +576,13 @@ UnknownText_0x6b0c6:
 
 UnknownText_0x6b0f2:
 	text "Uh-oh…"
-	line "The first #MON"
+	line "The first #mon"
 
 	para "in your party"
 	line "can't battle."
 
 	para "Please switch it"
-	line "with the #MON"
+	line "with the #mon"
 
 	para "you want to use,"
 	line "then come see me."
@@ -597,7 +597,7 @@ UnknownText_0x6b166:
 
 	para "You have no room"
 	line "to put the bug"
-	cont "#MON you catch."
+	cont "#mon you catch."
 
 	para "Please make room"
 	line "in your party or"
@@ -610,11 +610,11 @@ UnknownText_0x6b209:
 	text "Uh-oh…"
 	line "You have an EGG as"
 
-	para "the first #MON"
+	para "the first #mon"
 	line "in your party."
 
 	para "Please switch it"
-	line "with the #MON"
+	line "with the #mon"
 
 	para "you want to use,"
 	line "then come see me."
@@ -653,7 +653,7 @@ UnknownText_0x6b32b:
 	done
 
 UnknownText_0x6b370:
-	text "Some #MON can"
+	text "Some #mon can"
 	line "only be seen in"
 	cont "the PARK."
 	done
@@ -669,7 +669,7 @@ BugCatchingContestant1BStillCompetingText:
 	line "big part in this."
 
 	para "You never know"
-	line "what #MON will"
+	line "what #mon will"
 	cont "appear."
 	done
 
@@ -681,20 +681,20 @@ BugCatchingContestant2BText:
 
 BugCatchingContestant2BStillCompetingText:
 	text "ED: Maybe you win"
-	line "with big #MON?"
+	line "with big #mon?"
 	done
 
 BugCatchingContestant3BText:
 	text "NICK: Well done!"
 	line "I'm going to raise"
-	cont "my #MON better."
+	cont "my #mon better."
 	done
 
 BugCatchingContestant3BStillCompetingText:
 	text "NICK: Maybe you"
 	line "get a higher score"
 
-	para "for a #MON of"
+	para "for a #mon of"
 	line "an unusual color."
 	done
 
@@ -708,7 +708,7 @@ BugCatchingContestant4BStillCompetingText:
 	text "WILLIAM: Well, I'm"
 	line "satisfied because"
 
-	para "I caught a #MON"
+	para "I caught a #mon"
 	line "that I wanted."
 	done
 
@@ -735,7 +735,7 @@ BugCatchingContestant6BStillCompetingText:
 	line "to win if you get"
 
 	para "a high-level bug"
-	line "#MON."
+	line "#mon."
 
 	para "But I think they"
 	line "also consider some"
@@ -748,12 +748,12 @@ BugCatchingContestant7BText:
 
 	para "Do you feel like"
 	line "looking for bug"
-	cont "#MON with me?"
+	cont "#mon with me?"
 	done
 
 BugCatchingContestant7BStillCompetingText:
 	text "CINDY: I really"
-	line "love bug #MON!"
+	line "love bug #mon!"
 	done
 
 BugCatchingContestant8BText:
@@ -800,7 +800,7 @@ UnusedSudowoodoText:
 ; The tree Pokémon is Sudowoodo.
 ; The Silph Scope 2 was later reworked into the Squirtbottle.
 	text "I hear there's a"
-	line "#MON that looks"
+	line "#mon that looks"
 	cont "just like a tree."
 
 	para "You can reveal its"
@@ -823,7 +823,7 @@ UnusedBugCatchingContestExplanationText:
 	line "you also get to"
 
 	para "keep the bug"
-	line "#MON you may"
+	line "#mon you may"
 
 	para "have at the end of"
 	line "the contest."

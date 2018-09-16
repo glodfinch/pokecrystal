@@ -186,7 +186,7 @@ MahogayMart1FBlackBeltText_LanceEntered:
 	text "Urrgh…"
 
 	para "That guy's dragon"
-	line "#MON are tough…"
+	line "#mon are tough…"
 	done
 
 UnknownText_0x6c52a:

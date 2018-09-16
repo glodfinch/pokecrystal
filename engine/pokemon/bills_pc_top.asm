@@ -15,7 +15,7 @@ _BillsPC:
 	ret
 
 .Text_GottaHavePokemon:
-	; You gotta have #MON to call!
+	; You gotta have #mon to call!
 	text_jump UnknownText_0x1c1006
 	db "@"
 
@@ -129,7 +129,7 @@ BillsPC_MovePKMNMenu:
 	ret
 
 .Text_MonHoldingMail:
-	; There is a #MON holding MAIL. Please remove the MAIL.
+	; There is a #mon holding MAIL. Please remove the MAIL.
 	text_jump UnknownText_0x1c102b
 	db "@"
 
@@ -164,12 +164,12 @@ Unreferenced_Functione512:
 	ret
 
 .Text_NoMon:
-	; You don't have a single #MON!
+	; You don't have a single #mon!
 	text_jump UnknownText_0x1c1062
 	db "@"
 
 .Text_ItsYourLastMon:
-	; You can't deposit your last #MON!
+	; You can't deposit your last #mon!
 	text_jump UnknownText_0x1c1080
 	db "@"
 
@@ -225,7 +225,7 @@ Unreferenced_Functione56d:
 	ret
 
 UnknownText_0xe57e:
-	; You can't take any more #MON.
+	; You can't take any more #mon.
 	text_jump UnknownText_0x1c10a2
 	db "@"
 

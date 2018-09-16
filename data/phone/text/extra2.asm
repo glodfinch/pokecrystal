@@ -275,11 +275,11 @@ BeverlyFoundNuggetText:
 	done
 
 UnknownText_0x17485b:
-	text "Are your #MON"
+	text "Are your #mon"
 	line "in prime form?"
 
 	para "Let's chat about"
-	line "#MON again."
+	line "#mon again."
 	done
 
 UnknownText_0x174895:
@@ -372,7 +372,7 @@ UnknownText_0x174a80:
 	line "your guard down,"
 
 	para "even against a"
-	line "#MON you're"
+	line "#mon you're"
 	cont "used to seeing."
 	done
 
@@ -691,7 +691,7 @@ UnknownText_0x17536b:
 UnknownText_0x1753c5:
 	text "Have I ever failed"
 	line "to catch a wild"
-	cont "#MON?"
+	cont "#mon?"
 
 	para "You need to ask?"
 
@@ -752,7 +752,7 @@ JoeySharperText:
 	cont "than before!"
 
 	para "I doubt there's a"
-	line "#MON as cool as"
+	line "#mon as cool as"
 
 	para "this guy in your"
 	line "party!"
@@ -837,10 +837,10 @@ UnknownText_0x175786:
 	done
 
 WadeAreYouGrowingText:
-	text "Are your #MON"
+	text "Are your #mon"
 	line "growing?"
 
-	para "My #MON are"
+	para "My #mon are"
 	line "growing a bit too"
 
 	para "quickly for me."
@@ -880,7 +880,7 @@ UnknownText_0x1758e4:
 	line "the last second."
 
 	para "I know it's a"
-	line "common #MON…"
+	line "common #mon…"
 
 	para "But it does annoy"
 	line "me that it got"
@@ -891,7 +891,7 @@ UnknownText_0x1758e4:
 
 UnknownText_0x175976:
 	text "Do you feel like a"
-	line "#MON battle?"
+	line "#mon battle?"
 
 	para "It won't be like"
 	line "last time!"
@@ -1075,7 +1075,7 @@ UnknownText_0x175eaf:
 	text "Yeah, I know."
 
 	para "You're looking for"
-	line "rare #MON."
+	line "rare #mon."
 
 	para "Recently, all I've"
 	line "been catching are"
@@ -1230,7 +1230,7 @@ UnknownText_0x17638a:
 	para "Do you know EARL,"
 	line "the teacher who"
 
-	para "runs the #MON"
+	para "runs the #mon"
 	line "ACADEMY in VIOLET?"
 
 	para "I saw him doing"
@@ -1243,7 +1243,7 @@ UnknownText_0x17638a:
 UnknownText_0x176424:
 	text "Listen, listen!"
 
-	para "I collect #MON"
+	para "I collect #mon"
 	line "plush dolls."
 
 	para "But I can't seem"
@@ -1282,7 +1282,7 @@ UnknownText_0x1764eb:
 UnknownText_0x176599:
 	text "Listen, listen!"
 
-	para "There's a #MON"
+	para "There's a #mon"
 	line "SALON in GOLDENROD"
 
 	para "that's run by two"
@@ -1316,7 +1316,7 @@ UnknownText_0x1766ac:
 	para "battling only a"
 	line "little while ago!"
 
-	para "But the #MON"
+	para "But the #mon"
 	line "LEAGUE chose her"
 	cont "as a GYM LEADER!"
 
@@ -1514,11 +1514,11 @@ UnknownText_0x176c61:
 	line "I didn't see any"
 
 	para "where there are"
-	line "strong #MON."
+	line "strong #mon."
 	done
 
 UnknownText_0x176d32:
-	text "Rare #MON?"
+	text "Rare #mon?"
 
 	para "Hey, sorry! I was"
 	line "too focused on my"
@@ -1552,7 +1552,7 @@ UnknownText_0x176dd1:
 	para "DUNSPARCE don't"
 	line "appear when there"
 
-	para "are strong #MON"
+	para "are strong #mon"
 	line "around."
 	done
 
@@ -1588,7 +1588,7 @@ UnknownText_0x176eee:
 	line "a tiny margin."
 
 	para "I'm guessing my"
-	line "#MON's levels"
+	line "#mon's levels"
 
 	para "aren't high enough"
 	line "yet…"

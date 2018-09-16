@@ -1126,11 +1126,11 @@ Text_SaveFileCorrupted:
 	db "@"
 
 Text_SaveOnBoxSwitch:
-	; When you change a #MON BOX, data will be saved. OK?
+	; When you change a #mon BOX, data will be saved. OK?
 	text_jump UnknownText_0x1c462a
 	db "@"
 
 Text_SaveOnMoveMonWOMail:
-	; Each time you move a #MON, data will be saved. OK?
+	; Each time you move a #mon, data will be saved. OK?
 	text_jump UnknownText_0x1c465f
 	db "@"

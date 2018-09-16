@@ -1062,17 +1062,17 @@ LevelBallMultiplier:
 ; They are not used in gen 2, and are dummied out.
 
 Text_RBY_CatchMarowak:
-	; It dodged the thrown BALL! This #MON can't be caught!
+	; It dodged the thrown BALL! This #mon can't be caught!
 	text_jump UnknownText_0x1c5a5a
 	db "@"
 
 Text_RBY_NoShake:
-	; You missed the #MON!
+	; You missed the #mon!
 	text_jump UnknownText_0x1c5a90
 	db "@"
 
 Text_NoShake:
-	; Oh no! The #MON broke free!
+	; Oh no! The #mon broke free!
 	text_jump UnknownText_0x1c5aa6
 	db "@"
 
@@ -2061,7 +2061,7 @@ Softboiled_MilkDrinkFunction:
 	jr .loop
 
 .Text_CantBeUsed:
-	; That can't be used on this #MON.
+	; That can't be used on this #mon.
 	text_jump UnknownText_0x1c5bac
 	db "@"
 
@@ -2243,7 +2243,7 @@ PokeFluteEffect:
 	db "@"
 
 .AllSleepingMonWokeUp:
-	; All sleeping #MON woke up.
+	; All sleeping #mon woke up.
 	text_jump UnknownText_0x1c5c28
 	db "@"
 
@@ -2730,7 +2730,7 @@ CantGetOnYourBikeText:
 	db "@"
 
 Ball_BoxIsFullText:
-	; The #MON BOX is full. That can't be used now.
+	; The #mon BOX is full. That can't be used now.
 	text_jump UnknownText_0x1c5e3a
 	db "@"
 

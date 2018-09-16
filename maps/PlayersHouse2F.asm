@@ -94,13 +94,13 @@ PlayersHousePCScript:
 	end
 
 PlayersRadioText1:
-	text "PROF.OAK'S #MON"
+	text "PROF.OAK'S #mon"
 	line "TALK! Please tune"
 	cont "in next time!"
 	done
 
 PlayersRadioText2:
-	text "#MON CHANNEL!"
+	text "#mon CHANNEL!"
 	done
 
 PlayersRadioText3:
@@ -109,8 +109,8 @@ PlayersRadioText3:
 	done
 
 PlayersRadioText4:
-	text "#MON!"
-	line "#MON CHANNEL…"
+	text "#mon!"
+	line "#mon CHANNEL…"
 	done
 
 PlayersHouse2F_MapEvents:

@@ -35,7 +35,7 @@ UnknownText_0x640e6:
 	line "you!"
 
 	para "You saved that"
-	line "#MON at the"
+	line "#mon at the"
 
 	para "LIGHTHOUSE, didn't"
 	line "you?"
@@ -277,7 +277,7 @@ UnknownText_0x648dc:
 	para "How's your mom?"
 
 	para "Have you got lots"
-	line "of #MON?"
+	line "of #mon?"
 
 	para "Is it going to be"
 	line "sunny tomorrow?"
@@ -328,7 +328,7 @@ UnknownText_0x64a71:
 
 UnknownText_0x64ada:
 	text "Hey, let's battle"
-	line "our #MON!"
+	line "our #mon!"
 
 	para "I won't lose to"
 	line "you battling or in"
@@ -368,7 +368,7 @@ UnknownText_0x64b5f:
 UnknownText_0x64bc6:
 	text "I haven't had any"
 	line "luck seeing rare"
-	cont "#MON lately…"
+	cont "#mon lately…"
 
 	para "But I know they're"
 	line "out there!"
@@ -620,7 +620,7 @@ ChadObservingWildText:
 	line "observations."
 
 	para "I wish I could"
-	line "become a #MON"
+	line "become a #mon"
 
 	para "researcher like"
 	line "PROF.OAK soon."
@@ -683,11 +683,11 @@ ChadBlueGossipText:
 	para "He's PROF.OAK's"
 	line "grandson and a"
 
-	para "former #MON"
+	para "former #mon"
 	line "LEAGUE CHAMPION!"
 
 	para "He's one super"
-	line "#MON trainer!"
+	line "#mon trainer!"
 	done
 
 ChadDaisyGossipText:
@@ -698,7 +698,7 @@ ChadDaisyGossipText:
 	para "When she's around,"
 	line "even the most"
 
-	para "ferocious #MON"
+	para "ferocious #mon"
 	line "calm right down."
 	done
 
@@ -739,7 +739,7 @@ ChadKurtGossipText:
 	done
 
 ChadLeagueGossipText:
-	text "#MON LEAGUE is"
+	text "#mon LEAGUE is"
 	line "the great gather-"
 	cont "ing place for all"
 
@@ -749,7 +749,7 @@ ChadLeagueGossipText:
 	para "PROF.OAK acts as"
 	line "an advisor to the"
 
-	para "#MON LEAGUE's"
+	para "#mon LEAGUE's"
 	line "headquarters."
 
 	para "He really is a"
@@ -757,7 +757,7 @@ ChadLeagueGossipText:
 	done
 
 ChadRadioShowGossipText:
-	text "PROF.OAK'S #MON"
+	text "PROF.OAK'S #mon"
 	line "TALK is a popular"
 	cont "radio show, right?"
 
@@ -783,7 +783,7 @@ ChadBattlingGossipText:
 	para "But rather than"
 	line "battling, he found"
 
-	para "#MON themselves"
+	para "#mon themselves"
 	line "to be interesting."
 
 	para "So he abandoned"
@@ -821,7 +821,7 @@ ChadTravelGossipText:
 	para "While traveling,"
 	line "he must've learned"
 
-	para "about #MON"
+	para "about #mon"
 	line "naturally."
 
 	para "I envy him…"
@@ -899,7 +899,7 @@ UnknownText_0x65bc8:
 	line "cute, so I left"
 
 	para "it…"
-	line "#MON have to be"
+	line "#mon have to be"
 
 	para "cute. They're no"
 	line "good otherwise."
@@ -1067,7 +1067,7 @@ BrentRareTradeText:
 	text "Oh yeah, I got an"
 	line "extremely rare"
 
-	para "#MON in a trade"
+	para "#mon in a trade"
 	line "a while back."
 
 	para "Do you want to"
@@ -1092,7 +1092,7 @@ UnknownText_0x6613c:
 
 UnknownText_0x6618c:
 	text "Oh yeah, I saw a"
-	line "rare #MON about"
+	line "rare #mon about"
 	cont "an hour ago."
 
 	para "It was my first"
@@ -1115,7 +1115,7 @@ UnknownText_0x66214:
 	para "It'll be a chance"
 	line "to see my rare"
 
-	para "#MON. It'll be"
+	para "#mon. It'll be"
 	line "worth your time!"
 
 	para "You know where--"
@@ -1162,7 +1162,7 @@ UnknownText_0x663a1:
 	text "Did you know…?"
 	line "ABRA was the first"
 
-	para "#MON that BILL"
+	para "#mon that BILL"
 	line "ostensibly caught."
 	done
 
@@ -1219,7 +1219,7 @@ UnknownText_0x6651e:
 
 UnknownText_0x66579:
 	text "You want to see my"
-	line "rare #MON."
+	line "rare #mon."
 
 	para "Hurry over to"
 	line "@"
@@ -1450,7 +1450,7 @@ UnknownText_0x66b3e:
 	line "more fun fishing"
 
 	para "than beating wild"
-	line "#MON."
+	line "#mon."
 	done
 
 UnknownText_0x66b8f:
@@ -1685,7 +1685,7 @@ UnknownText_0x671a4:
 	text "!"
 
 	para "I've raised my"
-	line "#MON properly!"
+	line "#mon properly!"
 	done
 
 UnknownText_0x671eb:
@@ -1720,7 +1720,7 @@ UnknownText_0x67281:
 ErinWorkingHardText:
 	text "I'm working hard"
 	line "to raise my"
-	cont "#MON!"
+	cont "#mon!"
 
 	para "Come back for"
 	line "another battle!"

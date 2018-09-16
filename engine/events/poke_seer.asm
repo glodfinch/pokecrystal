@@ -297,7 +297,7 @@ SeerTexts:
 	dw SeerLevelOnlyText
 
 SeerIntroText:
-	; I see all. I know all… Certainly, I know of your #MON!
+	; I see all. I know all… Certainly, I know of your #mon!
 	text_jump UnknownText_0x1c475f
 	db "@"
 
@@ -372,7 +372,7 @@ SeerAdviceTexts:
 	dbw 255, SeerAdvice1
 
 SeerAdvice1:
-	; Incidentally… It would be wise to raise your #MON with a little more care.
+	; Incidentally… It would be wise to raise your #mon with a little more care.
 	text_jump UnknownText_0x1c497a
 	db "@"
 
@@ -387,12 +387,12 @@ SeerAdvice3:
 	db "@"
 
 SeerAdvice4:
-	; Incidentally… It certainly has grown mighty! This @ must have come through numerous #MON battles. It looks brimming with confidence.
+	; Incidentally… It certainly has grown mighty! This @ must have come through numerous #mon battles. It looks brimming with confidence.
 	text_jump UnknownText_0x1c4a5b
 	db "@"
 
 SeerAdvice5:
-	; Incidentally… I'm impressed by your dedication. It's been a long time since I've seen a #MON as mighty as this @ . I'm sure that seeing @ in battle would excite anyone.
+	; Incidentally… I'm impressed by your dedication. It's been a long time since I've seen a #mon as mighty as this @ . I'm sure that seeing @ in battle would excite anyone.
 	text_jump UnknownText_0x1c4ae5
 	db "@"
 

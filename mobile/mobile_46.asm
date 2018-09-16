@@ -5447,7 +5447,7 @@ Text_BattleRoomVisitLimit:
 	done
 
 Text_PartyMonTopsThisLevel:
-	text "A party #MON"
+	text "A party #mon"
 	line "tops this level."
 	done
 

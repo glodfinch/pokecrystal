@@ -623,7 +623,7 @@ MenuHeader_Buy:
 	ret
 
 Text_HerbShop_Intro:
-	; Hello, dear. I sell inexpensive herbal medicine. They're good, but a trifle bitter. Your #MON may not like them. Hehehehe…
+	; Hello, dear. I sell inexpensive herbal medicine. They're good, but a trifle bitter. Your #mon may not like them. Hehehehe…
 	text_jump UnknownText_0x1c4c28
 	db "@"
 

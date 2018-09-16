@@ -110,7 +110,7 @@ PC_CheckPartyForPokemon:
 	ret
 
 .MustHavePokemonToUse:
-	; Bzzzzt! You must have a #MON to use this!
+	; Bzzzzt! You must have a #mon to use this!
 	text_jump UnknownText_0x1c1328
 	db "@"
 
@@ -649,7 +649,7 @@ PokecenterPCText_AccessWhosePC:
 	db "@"
 
 PokecenterPCText_AccessedBillsPC:
-	; BILL's PC accessed. #MON Storage System opened.
+	; BILL's PC accessed. #mon Storage System opened.
 	text_jump UnknownText_0x1c1474
 	db "@"
 

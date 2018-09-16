@@ -71,7 +71,7 @@ BattleTower_PleaseReturnWhenReady:
 	db "@"
 
 JumpText_NeedAtLeastThreeMon:
-	; You need at least three #MON.
+	; You need at least three #mon.
 	text_jump UnknownText_0x1c5983
 	db "@"
 
@@ -81,17 +81,17 @@ JumpText_EggDoesNotQualify:
 	db "@"
 
 JumpText_OnlyThreeMonMayBeEntered:
-	; Only three #MON may be entered.
+	; Only three #mon may be entered.
 	text_jump Text_OnlyThreeMonMayBeEntered
 	db "@"
 
 JumpText_TheMonMustAllBeDifferentKinds:
-	; The @  #MON must all be different kinds.
+	; The @  #mon must all be different kinds.
 	text_jump Text_TheMonMustAllBeDifferentKinds
 	db "@"
 
 JumpText_TheMonMustNotHoldTheSameItems:
-	; The @  #MON must not hold the same items.
+	; The @  #mon must not hold the same items.
 	text_jump Text_TheMonMustNotHoldTheSameItems
 	db "@"
 
