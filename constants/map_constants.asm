@@ -449,7 +449,7 @@ ENDM
 	map_const ROUTE_26,                                    10, 54 ;  1
 	map_const ROUTE_27,                                    40,  9 ;  2
 	map_const ROUTE_29,                                    30,  9 ;  3
-	map_const NEW_BARK_TOWN,                               10,  9 ;  4
+	map_const NEW_BARK_TOWN,                               10, 11 ;  4
 	map_const ELMS_LAB,                                     5,  6 ;  5
 	map_const PLAYERS_HOUSE_1F,                             5,  4 ;  6
 	map_const PLAYERS_HOUSE_2F,                             4,  3 ;  7
@@ -491,3 +491,7 @@ ENDM
 	map_const ROUTE_30_BERRY_HOUSE,                         4,  4 ;  9
 	map_const MR_POKEMONS_HOUSE,                            4,  4 ; 10
 	map_const ROUTE_31_VIOLET_GATE,                         5,  4 ; 11
+
+	newgroup                                                      ; 27
+
+	map_const RANCH,                                       10,  9 ;  1
