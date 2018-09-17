@@ -2418,7 +2418,7 @@ wObjectStructsEnd:: ; d6de
 
 wCmdQueue:: ds CMDQUEUE_CAPACITY * CMDQUEUE_ENTRY_SIZE
 
-	ds 40
+	ds 19
 
 wMapObjects:: ; d71e
 wPlayerObject:: map_object wPlayer
@@ -2437,6 +2437,16 @@ wMap12Object::  map_object wMap12
 wMap13Object::  map_object wMap13
 wMap14Object::  map_object wMap14
 wMap15Object::  map_object wMap15
+wMap16Object::  map_object wMap16
+wMap17Object::  map_object wMap17
+wMap18Object::  map_object wMap18
+wMap19Object::  map_object wMap19
+wMap20Object::  map_object wMap20
+wMap21Object::  map_object wMap21
+wMap22Object::  map_object wMap22
+wMap23Object::  map_object wMap23
+wMap24Object::  map_object wMap24
+wMap25Object::  map_object wMap25
 wMapObjectsEnd::
 
 wObjectMasks:: ds NUM_OBJECTS ; d81e
@@ -2617,7 +2627,7 @@ wMountMoonSquareSceneID::                         db ; d9be
 wMobileTradeRoomSceneID::                         db ; d9bf
 wMobileBattleRoomSceneID::                        db ; d9c0
 
-	ds 49
+;memory locations after here are totally wrong
 
 ; fight counts
 wJackFightCount::    db ; d9f2
@@ -2649,8 +2659,6 @@ wKenjiFightCount::   db ; unused
 wParryFightCount::   db
 wErinFightCount::    db
 ; da0e
-
-	ds 100
 
 wEventFlags:: flag_array NUM_EVENTS ; da72
 ; db6c
