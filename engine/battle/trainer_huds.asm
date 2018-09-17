@@ -125,7 +125,7 @@ DrawPlayerPartyIconHUDBorder:
 
 .tiles
 	db $73 ; right side
-	db $5c ; bottom right
+	db $c7 ; bottom right
 	db $6f ; bottom left
 	db $76 ; bottom side
 .tiles_end

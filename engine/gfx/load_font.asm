@@ -69,8 +69,12 @@ LoadFrame:
 
 LoadBattleFontsHPBar:
 	ld de, FontBattleExtra
-	ld hl, vTiles2 tile $60
-	lb bc, BANK(FontBattleExtra), 12
+	ld hl, vTiles0 tile $C9
+	lb bc, BANK(FontBattleExtra), 2
+	call Get2bpp_2
+	ld de, FontBattleExtra + 2 tiles
+	ld hl, vTiles2 tile $62
+	lb bc, BANK(FontBattleExtra), 10
 	call Get2bpp_2
 	ld hl, vTiles2 tile $70
 	ld de, FontBattleExtra + 16 tiles ; "<DO>"
@@ -88,13 +92,14 @@ LoadHPBar:
 	lb bc, BANK(HPExpBarBorderGFX), 6
 	call Get1bpp_2
 	ld de, ExpBarGFX
-	ld hl, vTiles2 tile $55
+	ld hl, vTiles0 tile $C0
 	lb bc, BANK(ExpBarGFX), 9
 	call Get2bpp_2
 	ld de, MobilePhoneTilesGFX + 7 tiles ; mobile phone icon
-	ld hl, vTiles2 tile $5e
+	ld hl, vTiles0 tile $CB
 	lb bc, BANK(MobilePhoneTilesGFX), 2
 	call Get2bpp_2
+	ld hl, vTiles2 tile $5e
 	ret
 
 StatsScreen_LoadFont:

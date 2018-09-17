@@ -24,9 +24,9 @@ DrawBattleHPBar::
 	push bc
 
 ; Place 'HP:'
-	ld a, $60
+	ld a, $C9
 	ld [hli], a
-	ld a, $61
+	ld a, $CA
 	ld [hli], a
 
 ; Draw a template

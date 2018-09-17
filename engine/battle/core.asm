@@ -7919,7 +7919,7 @@ PlaceExpBar:
 .next
 	add $8
 	jr z, .loop2
-	add $54 ; tile to the left of small exp bar tile
+	add $BF ; tile to the left of small exp bar tile
 	jr .skip
 
 .loop2
