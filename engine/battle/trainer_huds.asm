@@ -110,7 +110,7 @@ DrawPlayerHUDBorder:
 .tiles
 	db $73 ; right side
 	db $77 ; bottom right
-	db $6f ; bottom left
+	db $dd ; bottom left
 	db $76 ; bottom side
 .tiles_end
 
@@ -126,7 +126,7 @@ DrawPlayerPartyIconHUDBorder:
 .tiles
 	db $73 ; right side
 	db $c7 ; bottom right
-	db $6f ; bottom left
+	db $dd ; bottom left
 	db $76 ; bottom side
 .tiles_end
 
@@ -150,7 +150,7 @@ DrawEnemyHUDBorder:
 	ret
 
 .tiles
-	db $6d ; left side
+	db $db ; left side
 	db $74 ; bottom left
 	db $78 ; bottom right
 	db $76 ; bottom side

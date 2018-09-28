@@ -46,7 +46,7 @@ BattleIntroSlidingPics:
 	cp $1
 	jr z, .skip1
 	push de
-	call .subfunction3
+	call .copyTrainerBackPicTilesToOAM
 	pop de
 
 .skip1
@@ -56,9 +56,9 @@ BattleIntroSlidingPics:
 	jr nz, .loop1
 	ret
 
-.subfunction3
+.copyTrainerBackPicTilesToOAM
 	ld hl, wVirtualOAMSprite00XCoord
-	ld c, $12 ; 18
+	ld c, $20 ; 32
 	ld de, SPRITEOAMSTRUCT_LENGTH
 .loop3
 	dec [hl]
@@ -90,7 +90,7 @@ BattleIntroSlidingPics:
 	dec c
 	jr nz, .loop5
 	xor a
-	ld c, $30 ; 48
+	ld c, $40 ; 48
 .loop6
 	ld [hli], a
 	dec c

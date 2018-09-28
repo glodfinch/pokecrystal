@@ -459,7 +459,11 @@ Unreferenced_Function4df7f:
 StatsScreen_PlaceHorizontalDivider:
 	hlcoord 0, 7
 	ld b, SCREEN_WIDTH
+	ld a, [wIsInBattle]
+	and a
 	ld a, $62 ; horizontal divider (empty HP/exp bar)
+	jr z, .loop
+	ld a, $76
 .loop
 	ld [hli], a
 	dec b

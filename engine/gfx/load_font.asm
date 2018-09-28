@@ -50,6 +50,26 @@ _LoadFontsBattleExtra::
 	call Get2bpp_2
 	jr LoadFrame
 
+_LoadFontsBattleExtraInBattle::
+	ld de, FontBattleExtra + 17 tiles
+	ld hl, vTiles2 tile $71
+	lb bc, BANK(FontBattleExtra), 8
+	call Get2bpp_2
+	jr LoadFrame
+
+_CheckBattleLoadFontsBattleExtra::
+	push af
+	ld a, [wIsInBattle]
+	and a
+	jr z, .notInBattle
+	call _LoadFontsBattleExtraInBattle
+	jr .cont
+.notInBattle
+	call _LoadFontsBattleExtra
+.cont
+	pop af
+	ret
+
 LoadFrame:
 	ld a, [wTextBoxFrame]
 	maskbits NUM_FRAMES
@@ -73,18 +93,18 @@ LoadBattleFontsHPBar:
 	lb bc, BANK(FontBattleExtra), 2
 	call Get2bpp_2
 	ld de, FontBattleExtra + 2 tiles
-	ld hl, vTiles2 tile $62
+	ld hl, vTiles0 tile $D0
 	lb bc, BANK(FontBattleExtra), 10
 	call Get2bpp_2
-	ld hl, vTiles2 tile $70
-	ld de, FontBattleExtra + 16 tiles ; "<DO>"
+	ld hl, vTiles2 tile $71
+	ld de, FontBattleExtra + 17 tiles ; "<DO>"
 	lb bc, BANK(FontBattleExtra), 3 ; "<DO>" to "『"
 	call Get2bpp_2
 	call LoadFrame
 
 LoadHPBar:
 	ld de, EnemyHPBarBorderGFX
-	ld hl, vTiles2 tile $6c
+	ld hl, vTiles0 tile $da
 	lb bc, BANK(EnemyHPBarBorderGFX), 4
 	call Get1bpp_2
 	ld de, HPExpBarBorderGFX
@@ -103,11 +123,15 @@ LoadHPBar:
 	ret
 
 StatsScreen_LoadFont:
-	call _LoadFontsBattleExtra
+	call _CheckBattleLoadFontsBattleExtra
+	ld a, [wIsInBattle]
+	and a
+	jr nz, .isInBattle1
 	ld de, EnemyHPBarBorderGFX
 	ld hl, vTiles2 tile $6c
 	lb bc, BANK(EnemyHPBarBorderGFX), 4
 	call Get1bpp_2
+.isInBattle1
 	ld de, HPExpBarBorderGFX
 	ld hl, vTiles2 tile $78
 	lb bc, BANK(HPExpBarBorderGFX), 1
@@ -117,9 +141,13 @@ StatsScreen_LoadFont:
 	lb bc, BANK(HPExpBarBorderGFX), 2
 	call Get1bpp_2
 	ld de, ExpBarGFX
+	ld a, [wIsInBattle]
+	and a
+	jr nz, .isInBattle2
 	ld hl, vTiles2 tile $55
 	lb bc, BANK(ExpBarGFX), 8
 	call Get2bpp_2
+.isInBattle2
 LoadStatsScreenPageTilesGFX:
 	ld de, StatsScreenPageTilesGFX
 	ld hl, vTiles2 tile $31

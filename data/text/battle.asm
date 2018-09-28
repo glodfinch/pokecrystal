@@ -201,8 +201,8 @@ SentAllToMomText:
 
 BattleText_0x80a4f:
 	text "<RIVAL>: Huh? I"
-	line "should've chosen"
-	cont "your #mon!"
+	line "should have"
+	cont "chosen your #mon!"
 	prompt
 
 BattleText_MonFainted:

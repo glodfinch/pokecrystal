@@ -45,8 +45,8 @@ GetEnemyFrontpicCoords:
 	ret
 
 GetPlayerBackpicCoords:
-	hlcoord 2, 6
-	lb bc, 6, 6
+	hlcoord 0, 4
+	lb bc, 8, 8
 	ret
 
 DoWeatherModifiers:

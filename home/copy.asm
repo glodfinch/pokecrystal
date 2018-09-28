@@ -102,7 +102,7 @@ LoadStandardFont::
 	ret
 
 LoadFontsBattleExtra::
-	farcall _LoadFontsBattleExtra
+	farcall _CheckBattleLoadFontsBattleExtra
 	ret
 
 LoadFontsExtra::

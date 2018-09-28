@@ -357,8 +357,8 @@ BattleBGEffect_HideMon:
 	jr .got_pointer
 
 .player_side
-	hlcoord 2, 6
-	lb bc, 6, 6
+	hlcoord 0, 4
+	lb bc, 8, 8
 .got_pointer
 	call ClearBox
 	pop bc
@@ -517,8 +517,8 @@ BattleBGEffect_HeadFollow:
 	push bc
 	call BGEffect_CheckBattleTurn
 	jr nz, .player_turn_2
-	hlcoord 12, 5
-	lb bc, 2, 7
+	hlcoord 12, 4
+	lb bc, 3, 7
 	jr .okay2
 
 .player_turn_2
@@ -657,10 +657,11 @@ BattleBGEffect_EnterMon:
 	call BattleBGEffect_RunPicResizeScript
 	ret
 
+;dimension, tile offset, coords from tables below
 .PlayerData:
-	db  2, $31, 2
-	db  1, $31, 1
-	db  0, $31, 0
+	db  5, $31, 8
+	db  4, $31, 7
+	db  6, $31, 6
 	db -1
 .EnemyData:
 	db  5, $00, 5
@@ -849,6 +850,9 @@ BattleBGEffect_RunPicResizeScript:
 	dwcoord 12,  0
 	dwcoord 13,  2
 	dwcoord 14,  4
+	dwcoord  0,  4
+	dwcoord  3,  7
+	dwcoord  4,  9
 
 .BGSquares:
 bgsquare: MACRO
@@ -862,6 +866,7 @@ ENDM
 	bgsquare 7, 7, .SevenBySeven
 	bgsquare 5, 5, .FiveByFive
 	bgsquare 3, 3, .ThreeByThree
+	bgsquare 8, 8, .EightByEight
 
 .SixBySix:
 	db $00, $06, $0c, $12, $18, $1e
@@ -901,6 +906,16 @@ ENDM
 	db $00, $15, $2a
 	db $03, $18, $2d
 	db $06, $1b, $30
+
+.EightByEight:
+	db $00, $08, $10, $18, $20, $28, $30, $38
+	db $01, $09, $11, $19, $21, $29, $31, $39
+	db $02, $0a, $12, $1a, $22, $2a, $32, $3a
+	db $03, $0b, $13, $1b, $23, $2b, $33, $3b
+	db $04, $0c, $14, $1c, $24, $2c, $34, $3c
+	db $05, $0d, $15, $1d, $25, $2d, $35, $3d
+	db $06, $0e, $16, $1e, $26, $2e, $36, $3e
+	db $07, $0f, $17, $1f, $27, $2f, $37, $3f
 
 BattleBGEffect_Surf:
 	call BattleBGEffects_AnonJumptable
@@ -1420,11 +1435,11 @@ BattleBGEffect_Tackle:
 	ld [hl], $0
 	call BGEffect_CheckBattleTurn
 	jr nz, .player_side
-	ld a, 2
+	ld a, 2 ;this is how far the bg is moved
 	jr .okay
 
 .player_side
-	ld a, -2
+	ld a, -2 ;negatives move the bg to the right
 .okay
 	ld [hl], a
 	ret
@@ -2628,7 +2643,7 @@ BattleBGEffect_SetLCDStatCustoms1:
 	jr .okay
 
 .player_turn
-	lb de, $2f, $5e
+	lb de, $1f, $5e
 .okay
 	ld a, d
 	ldh [hLYOverrideStart], a

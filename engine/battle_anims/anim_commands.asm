@@ -834,23 +834,23 @@ BattleAnimCmd_PlayerHeadObj:
 .okay
 	ld a, $28
 	ld [hli], a
-	ld a, $35
+	ld a, $2a
 	ld [hli], a
 	ld a, $29
 	ld [hli], a
-	ld a, $43
+	ld a, $3f
 	ld [hl], a
 
-	ld hl, vTiles0 tile $66
-	ld de, vTiles2 tile $05
+	ld hl, vTiles0 tile $5b
+	ld de, vTiles2 tile $04
 	ld a, $70
 	ld [wBattleAnimTemp0], a
 	ld a, $7
-	call .LoadHead
+	call .LoadHeadEnemy
 	ld de, vTiles2 tile $31
-	ld a, $60
+	ld a, $80
 	ld [wBattleAnimTemp0], a
-	ld a, $6
+	ld a, $8
 	call .LoadHead
 	ret
 
@@ -873,6 +873,27 @@ BattleAnimCmd_PlayerHeadObj:
 	pop af
 	dec a
 	jr nz, .LoadHead
+	ret
+
+.LoadHeadEnemy:
+	push af
+	push hl
+	push de
+	lb bc, BANK(BattleAnimCmd_EnemyFeetObj), 3
+	call Request2bpp
+	pop de
+	ld a, [wBattleAnimTemp0]
+	ld l, a
+	ld h, 0
+	add hl, de
+	ld e, l
+	ld d, h
+	pop hl
+	ld bc, 3 tiles
+	add hl, bc
+	pop af
+	dec a
+	jr nz, .LoadHeadEnemy
 	ret
 
 BattleAnimCmd_CheckPokeball:

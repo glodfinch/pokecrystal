@@ -9,6 +9,8 @@ BATTLETRANSITION_END              EQU $80
 BATTLETRANSITION_SQUARE EQUS "\"8\"" ; $fe
 
 DoBattleTransition:
+	ld a, $01
+	ld [wIsInBattle], a
 	call .InitGFX
 	ldh a, [rBGP]
 	ld [wBGP], a

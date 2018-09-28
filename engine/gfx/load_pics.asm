@@ -232,7 +232,7 @@ GetMonBackpic:
 	pop af
 	call FarDecompress
 	ld hl, wDecompressScratch
-	ld c, 6 * 6
+	ld c, 8 * 8
 	call FixBackpicAlignment
 	pop hl
 	ld de, wDecompressScratch
@@ -379,6 +379,9 @@ FixBackpicAlignment:
 	and a
 	jr z, .keep_dims
 	ld a, c
+	cp 8 * 8
+	ld de, 8 * 8 tiles
+	jr z, .got_dims
 	cp 7 * 7
 	ld de, 7 * 7 tiles
 	jr z, .got_dims

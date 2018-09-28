@@ -8,6 +8,7 @@ DoBattle:
 	ld [wBattleEnded], a
 	inc a
 	ld [wBattleHasJustStarted], a
+	ld [wIsInBattle], a
 	ld hl, wOTPartyMon1HP
 	ld bc, PARTYMON_STRUCT_LENGTH - 1
 	ld d, BATTLEACTION_SWITCH1 - 1
@@ -79,9 +80,10 @@ DoBattle:
 	ld a, [hl]
 	ld [wCurPartySpecies], a
 	ld [wTempBattleMonSpecies], a
-	hlcoord 1, 5
+	hlcoord 1, 4
 	ld a, 9
 	call SlideBattlePicOut
+	hlcoord 0, 4
 	call LoadTileMapToTempTileMap
 	call ResetBattleParticipants
 	call InitBattleMon
@@ -117,6 +119,8 @@ DoBattle:
 
 WildFled_EnemyFled_LinkBattleCanceled:
 	call Call_LoadTempTileMapToTileMap
+	xor a
+	ld [wIsInBattle], a
 	ld a, [wBattleResult]
 	and BATTLERESULT_BITMASK
 	add DRAW
@@ -2342,6 +2346,8 @@ EnemyPartyMonEntrance:
 WinTrainerBattle:
 ; Player won the battle
 	call StopDangerSound
+	xor a
+	ld [wIsInBattle], a
 	ld a, $1
 	ld [wBattleLowHealthAlarm], a
 	ld [wBattleEnded], a
@@ -2901,6 +2907,8 @@ ForcePickSwitchMonInBattle:
 	ret
 
 LostBattle:
+	xor a
+	ld [wIsInBattle], a
 	ld a, 1
 	ld [wBattleEnded], a
 
@@ -3064,7 +3072,7 @@ SlideBattlePicOut:
 .loop
 	push bc
 	push hl
-	ld b, $7
+	ld b, $8
 .loop2
 	push hl
 	call .DoFrame
@@ -3817,6 +3825,8 @@ TryToRunAwayFromBattle:
 	dec a ; LOSE
 .fled
 	ld b, a
+	xor a
+	ld [wIsInBattle], a
 	ld a, [wBattleResult]
 	and BATTLERESULT_BITMASK
 	add b
@@ -4007,8 +4017,8 @@ SwitchPlayerMon:
 SendOutPlayerMon:
 	ld hl, wBattleMonDVs
 	predef GetUnownLetter
-	hlcoord 1, 5
-	ld b, 7
+	hlcoord 0, 4
+	ld b, 8
 	ld c, 8
 	call ClearBox
 	call WaitBGMap
@@ -7910,7 +7920,12 @@ PlaceExpBar:
 	sub $8
 	jr c, .next
 	ld b, a
+	ld a, [wIsInBattle]
+	and a
 	ld a, $6a ; full bar
+	jr z, .notInBattle1
+	ld a, $d8
+.notInBattle1
 	ld [hld], a
 	dec c
 	jr z, .finish
@@ -7919,15 +7934,35 @@ PlaceExpBar:
 .next
 	add $8
 	jr z, .loop2
-	add $BF ; tile to the left of small exp bar tile
+	push af
+	ld a, [wIsInBattle]
+	and a
+	jr z, .notInBattle2
+	pop af
+	add $bf ; tile to the left of small exp bar tile
+	jr .cont
+.notInBattle2
+	pop af
+	add $54
+.cont
 	jr .skip
 
 .loop2
-	ld a, $62 ; empty bar
+	ld a, [wIsInBattle]
+	and a
+	ld a, $62
+	jr z, .notInBattle3
+	ld a, $d0 ; empty bar
+.notInBattle3
 
 .skip
 	ld [hld], a
-	ld a, $62 ; empty bar
+	ld a, [wIsInBattle]
+	and a
+	ld a, $62
+	jr z, .notInBattle4
+	ld a, $d0 ; empty bar
+.notInBattle4
 	dec c
 	jr nz, .loop2
 
@@ -8898,8 +8933,8 @@ InitBattleDisplay:
 	ld c, 18
 	call TextBox
 	farcall MobileTextBorder
-	hlcoord 1, 5
-	lb bc, 3, 7
+	hlcoord 0, 4
+	lb bc, 4, 8
 	call ClearBox
 	call LoadStandardFont
 	call _LoadBattleFontsHPBar
@@ -8918,8 +8953,8 @@ InitBattleDisplay:
 	ldh [hBGMapMode], a
 	ld a, $31
 	ldh [hGraphicStartTile], a
-	hlcoord 2, 6
-	lb bc, 6, 6
+	hlcoord 0, 4
+	lb bc, 8, 8
 	predef PlaceGraphic
 	xor a
 	ldh [hWY], a
@@ -8989,7 +9024,7 @@ GetTrainerBackpic:
 
 .Decompress:
 	ld de, vTiles2 tile $31
-	ld c, 7 * 7
+	ld c, 8 * 8
 	predef DecompressGet2bpp
 	ret
 
@@ -9002,15 +9037,15 @@ CopyBackpic:
 	ld de, vTiles2 tile $31
 	ldh a, [hROMBank]
 	ld b, a
-	ld c, $31
+	ld c, $40
 	call Get2bpp
 	pop af
 	ldh [rSVBK], a
 	call .LoadTrainerBackpicAsOAM
 	ld a, $31
 	ldh [hGraphicStartTile], a
-	hlcoord 2, 6
-	lb bc, 6, 6
+	hlcoord 0, 4
+	lb bc, 8, 8
 	predef PlaceGraphic
 	ret
 
@@ -9018,11 +9053,11 @@ CopyBackpic:
 	ld hl, wVirtualOAMSprite00
 	xor a
 	ldh [hMapObjectIndexBuffer], a
-	ld b, 6
-	ld e, (SCREEN_WIDTH + 1) * TILE_WIDTH
+	ld b, 8
+	ld e, (SCREEN_WIDTH - 1) * TILE_WIDTH
 .outer_loop
-	ld c, 3
-	ld d, 8 * TILE_WIDTH
+	ld c, 4
+	ld d, 6 * TILE_WIDTH
 .inner_loop
 	ld [hl], d ; y
 	inc hl
@@ -9040,7 +9075,7 @@ CopyBackpic:
 	dec c
 	jr nz, .inner_loop
 	ldh a, [hMapObjectIndexBuffer]
-	add $3
+	add $4
 	ldh [hMapObjectIndexBuffer], a
 	ld a, e
 	add 1 * TILE_WIDTH

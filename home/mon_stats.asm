@@ -18,25 +18,44 @@ IsAPokemon::
 DrawBattleHPBar::
 ; Draw an HP bar d tiles long at hl
 ; Fill it up to e pixels
-
+; to do: find a less dumb way to do this
 	push hl
 	push de
 	push bc
 
 ; Place 'HP:'
-	ld a, $C9
+	ld a, [wIsInBattle]
+	and a
+	ld a, $60
+	jr z, .notInBattle1
+	ld a, $c9
+.notInBattle1
 	ld [hli], a
-	ld a, $CA
+	ld a, [wIsInBattle]
+	and a
+	ld a, $61
+	jr z, .notInBattle2
+	ld a, $ca
+.notInBattle2
 	ld [hli], a
 
 ; Draw a template
 	push hl
-	ld a, $62 ; empty bar
+	ld a, [wIsInBattle]
+	and a
+	ld a, $62
+	jr z, .template
+	ld a, $d0 ; empty bar
 .template
 	ld [hli], a
 	dec d
 	jr nz, .template
-	ld a, $6b ; bar end
+	ld a, [wIsInBattle]
+	and a
+	ld a, $6b
+	jr z, .notInBattle3
+	ld a, $d9 ; bar end
+.notInBattle3
 	add b
 	ld [hl], a
 	pop hl
@@ -57,7 +76,12 @@ DrawBattleHPBar::
 	jr c, .lastbar
 
 	ld e, a
-	ld a, $6a ; full bar
+	ld a, [wIsInBattle]
+	and a
+	ld a, $6a
+	jr z, .notInBattle4
+	ld a, $d8 ; full bar
+.notInBattle4
 	ld [hli], a
 	ld a, e
 	and a
@@ -65,7 +89,12 @@ DrawBattleHPBar::
 	jr .fill
 
 .lastbar
-	ld a, $62  ; empty bar
+	ld a, [wIsInBattle]
+	and a
+	ld a, $62
+	jr z, .notInBattle5
+	ld a, $d0  ; empty bar
+.notInBattle5
 	add e      ; + e
 	ld [hl], a
 

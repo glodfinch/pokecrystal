@@ -187,6 +187,7 @@ BattleAnimFrameData:
 	dw .Frameset_b8 ; BATTLEANIMFRAMESET_B8
 
 .Frameset_00:
+	frame BATTLEANIMOAMSET_BLANK, 4
 	frame BATTLEANIMOAMSET_00,  6
 	delanim
 
